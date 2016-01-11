@@ -19,7 +19,7 @@ module WordCounter
     end
     def to_json
       require 'json'
-      json_output = { marks: marks_count, words: word_counts }
+      json_output = { marks: marks_count , words: word_counts }
       JSON.pretty_generate(json_output)
     end
     def to_xml

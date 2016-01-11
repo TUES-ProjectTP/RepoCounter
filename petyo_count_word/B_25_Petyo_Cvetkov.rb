@@ -1,10 +1,10 @@
-require './B_25_Petyo_Cvetkov/CountWords.rb'
+require_relative 'B_25_Petyo_Cvetkov/CountWords'
 
 path = ARGV[0]
-format = ARGV[1]
+format = ARGV[3]
 
 if path == "-d"
-  result = WordCounter::parse_dir format
+  result = WordCounter::parse_dir ARGV[1]
 else
   if (path.match('^https?:\/\/.+'))
     result = WordCounter::parse_webpage(path)
