@@ -1,4 +1,4 @@
-require_relative 'B_25_Petyo_Cvetkov/CountWords'
+require './B_25_Petyo_Cvetkov/CountWords'
 
 path = ARGV[0]
 format = ARGV[3]

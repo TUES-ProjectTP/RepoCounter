@@ -38,13 +38,38 @@ module WordCounter
         if File.directory? filename
           dir_parser filename
         else
-        if File.extname(filename) == ".#{ARGV[2]}"
-        @text += File.read(filename)
-        @text += " "
-        end
+          if ARGV[2] == 'cpp'
+            if File.extname(filename) == ".#{ARGV[2]}"||
+              File.extname(filename) == ".c"||
+              File.extname(filename) == ".cxx"||
+              File.extname(filename) == ".cp"
+              File.extname(filename) == ".cc"||
+              File.extname(filename) == ".c++"
+
+
+              puts "hi"
+              read filename
+            end
+          elsif ARGV[2] == "rb"
+            if File.extname(filename) == ".#{ARGV[2]}"
+
+              read filename
+            end
+          elsif ARGV[2] == "java"
+            if File.extname(filename) == ".#{ARGV[2]}"
+
+              read filename
+            end
+
+          end
         end
       end
       parse(@text)
     end
   end
+end
+def read filename
+  @text += File.read(filename)
+  @text += " "
+
 end
