@@ -17,10 +17,10 @@ end
 
 
 if format == 'json'
-  File.open('result.json', 'w') { |file| file << result.to_json }
+  File.open("#{ARGV[2]}.json", 'w') { |file| file << result.to_json }
   puts result.to_json
 elsif format == 'xml'
-  File.open('result.xml', 'w') { |file| file << result.to_xml }
+  File.open("#{ARGV[2]}.xml", 'w') { |file| file << result.to_xml }
   puts result.to_xml
 else
   File.open("#{ARGV[2]}.csv", 'w') { |file| file << result.to_csv }
