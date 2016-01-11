@@ -3,7 +3,7 @@ require './folder_utils'
 require './managers/github_manager'
 require './managers/oracle_manager'
 
-repositories = FolderUtils::ParseRepos(Globals::REPOSITORY_FOLDER_PATH);
+repositories = FolderUtils::ParseRepos(Globals::REPOSITORY_FOLDER_PATH)
 
 repositories.keys.each do |source_control|
   current_manager = {}
@@ -18,7 +18,7 @@ repositories.keys.each do |source_control|
   end
 
   repositories[source_control].each do |repository_link|
-    current_manager.download_repository(Globals::FILE_EXPORT_PATH, repository_link)
+    current_manager.download_repository(Globals::DOWNLOADED_REPOSITORY_PATH, repository_link)
   end
 
   # use wordCounter's parseFolder method to count all files that end with .java

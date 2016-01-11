@@ -1,4 +1,5 @@
 class Globals
   REPOSITORY_FOLDER_PATH = './repositories/'
-  FILE_EXPORT_PATH = './result/'
+  DOWNLOADED_REPOSITORY_PATH = './downloaded'
+  RESULT_STATISTICS_PATH = './result/'
 end
