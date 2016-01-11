@@ -2,8 +2,7 @@ class FolderUtils
 
   def self.ParseRepos(path)
     # TODO: Implement
-    hash = Hash.new()
-    hash['github'] = []
+    hash = Hash.new
 
     Dir.glob(path + "*").each do |folder|
       folder = folder.split('/').last
