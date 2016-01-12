@@ -10,7 +10,7 @@ module WordCounter
       file.write(text(5,75, marks_count.to_s,90))
 
       bar_w = 15
-      bar_h = 220
+      bar_h = 500
       ratio = bar_h/word_counts[0][1].to_f
       offset = bar_w
       word_counts.each do |word,val|

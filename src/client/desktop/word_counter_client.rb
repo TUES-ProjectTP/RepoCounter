@@ -54,7 +54,11 @@ end
 
 def exec_counter(path, language, format, result_path)
     #return "#{path}/#{language}"
-    return `ruby ../../word_counter/word_counter.rb -d #{path}/#{language} #{format} json #{result_path}`
+    result = `ruby ../../word_counter/word_counter.rb -d #{path}/#{language} #{format} json #{result_path}`
+    svg_dir = result_path.length > 0 ? result_path : '.'
+    puts "#{svg_dir}/#{format}.svg"
+    `Start firefox #{svg_dir}/#{format}.svg`
+    return result
 end
 
 Client.new
